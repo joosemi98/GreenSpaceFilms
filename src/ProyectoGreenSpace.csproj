@@ -81,12 +81,6 @@
     <Compile Include="FrmRegister.Designer.cs">
       <DependentUpon>FrmRegister.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmVerificationCode.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmVerificationCode.Designer.cs">
-      <DependentUpon>FrmVerificationCode.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmInsertCode.resx">
       <DependentUpon>FrmInsertCode.cs</DependentUpon>
@@ -99,9 +93,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegister.resx">
       <DependentUpon>FrmRegister.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmVerificationCode.resx">
-      <DependentUpon>FrmVerificationCode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

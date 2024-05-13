@@ -45,10 +45,22 @@ namespace ProyectoGreenSpace
                         else
                         {
                             MessageBox.Show("Usuario registrado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            LimpiarDatos();
-                            FrmVerificationCode formVerification = new FrmVerificationCode(user.Mail);
-                            formVerification.Show();
-                            this.Hide(); // Oculto el formulario de registro
+                            Mail enviarMail = new Mail();
+                            if (ValidarDatos())
+                            {
+                                int code = enviarMail.Enviar("floadm123@gmail.com", "AdminFlo123", user.Mail);
+                                if (code != -1)
+                                {
+                                    LimpiarDatos();
+                                    FrmInsertCode frmInsertCode = new FrmInsertCode(code);
+                                    frmInsertCode.Show();
+                                    this.Hide();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Código no enviado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+                            }
                         }
                     }
                     bdata.CerrarConexion();

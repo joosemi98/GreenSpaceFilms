@@ -18,7 +18,7 @@ namespace ProyectoGreenSpace
             // Conexión Local
             string server = "server=127.0.0.1;";
             string port = "port=3306;";
-            string database = "database=bdusers;";
+            string database = "database=GreenSpaceFilms;";
             string usuario = "uid=root;";
             string password = "pwd=;";
             string convertDateTimeNull = "Convert Zero Datetime=True;";
